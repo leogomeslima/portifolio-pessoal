@@ -33,9 +33,11 @@ Este é um projeto de portfólio pessoal desenvolvido para apresentar informaç�
 ## Como Executar o Projeto
 
 1. Clone o repositório (após o upload):
+
    ```bash
    git clone https://github.com/leogomeslima/portifolio-pessoal.git
    ```
+
 2. Navegue até a pasta do projeto.
 3. Abra o arquivo `index.html` em qualquer navegador moderno.
 
