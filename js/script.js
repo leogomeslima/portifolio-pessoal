@@ -1,3 +1,26 @@
+// --- DESTAQUE DO LINK ATIVO ---
+function destacarLinkAtivo() {
+    const linksMenu = document.querySelectorAll(".menu a");
+    const urlAtual = window.location.pathname;
+    
+    // Extrai o nome da página (ex: sobre.html) da URL
+    const paginaAtual = urlAtual.split("/").pop() || "index.html";
+
+    linksMenu.forEach(link => {
+        const href = link.getAttribute("href");
+        
+        // Se o link corresponde à página atual
+        if (paginaAtual === href) {
+            link.classList.add("ativo");
+        } else {
+            link.classList.remove("ativo");
+        }
+    });
+}
+
+// Executa a função ao carregar a página
+document.addEventListener("DOMContentLoaded", destacarLinkAtivo);
+
 // --- MENU RESPONSIVO ---
 const menuToggle = document.getElementById("menuToggle");
 const menu = document.getElementById("menu");
