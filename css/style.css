@@ -84,6 +84,32 @@ body {
     color: var(--cor-primaria);
 }
 
+.menu a.ativo {
+    color: var(--cor-primaria);
+}
+
+/* Indicador de link ativo (desktop) */
+@media (min-width: 769px) {
+    .menu a {
+        position: relative;
+    }
+    
+    .menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--cor-primaria);
+        transition: var(--transicao);
+    }
+    
+    .menu a.ativo::after {
+        width: 100%;
+    }
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
@@ -338,9 +364,15 @@ body {
 
     .menu a {
         display: block;
-        padding: 15px 0;
+        padding: 15px 10px;
         font-size: 1.1rem;
         border-bottom: 1px solid var(--cor-borda);
+        border-radius: 6px;
+    }
+
+    .menu a.ativo {
+        background-color: rgba(37, 99, 235, 0.1);
+        color: var(--cor-primaria);
     }
 
     .hero h1 {
